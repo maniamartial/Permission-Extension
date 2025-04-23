@@ -21,6 +21,24 @@ app_license = "agpl-3.0"
 # 	}
 # ]
 
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                   "Item-custom_branches",
+                   "Item-custom_branch",
+                    "Item Default-custom_branch",
+                ),
+            ]
+        ],
+    },
+
+]
+
 # Includes in <head>
 # ------------------
 
@@ -121,6 +139,11 @@ app_license = "agpl-3.0"
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
+permission_query_conditions = {
+    "Item": "permission_extension.permission_extension.controllers.item.get_permission_query_conditions",
+    "Customer": "permission_extension.permission_extension.controllers.customer.get_permission_query_conditions",
+    "Supplier": "permission_extension.permission_extension.controllers.supplier.get_permission_query_conditions",
+}
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
