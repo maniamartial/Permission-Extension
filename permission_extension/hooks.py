@@ -31,7 +31,6 @@ fixtures = [
                 (
                    "Item-custom_branches",
                    "Item-custom_branch",
-                    "Item Default-custom_branch",
                 ),
             ]
         ],
